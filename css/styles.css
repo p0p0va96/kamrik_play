@@ -109,8 +109,8 @@ p {
 .homer-gif {
   display: block;
   margin: 20px auto 0; /* зверху 20px відступ від тексту, центр по горизонталі */
-  width: 120px;
-  height: auto;
+  width: 180px;        /* збільшено для великих екранів */
+  height: auto;        /* зберігаємо пропорції */
 }
 
 /* ---------------- MOBILE ---------------- */
@@ -132,7 +132,7 @@ p {
     font-size: 0.85rem;
   }
 
-  .homer-gif { width: 90px; }
+  .homer-gif { width: 150px; } /* збільшено для середніх екранів */
 }
 
 @media (max-width: 480px) {
@@ -150,5 +150,5 @@ p {
     font-size: 0.8rem;
   }
 
-  .homer-gif { width: 70px; }
+  .homer-gif { width: 120px; } /* збільшено для маленьких екранів */
 }

@@ -11,11 +11,11 @@ html, body {
   color: #fff;
 }
 
-/* Фон з пришвидшеною анімацією */
+/* Фон з анімацією */
 body {
   background: url("../img/kamrik.jpg") no-repeat center center;
-  background-size: 170% auto; /* Трохи зменшив масштаб */
-  animation: animateBackground 10s ease-in-out infinite alternate; /* Було 30s */
+  background-size: 170% auto;
+  animation: animateBackground 10s ease-in-out infinite alternate;
 }
 
 @keyframes animateBackground {
@@ -23,13 +23,13 @@ body {
   100% { background-position: 100% 100%; }
 }
 
-/* Основний контейнер — більш прозорий */
+/* Основний контейнер */
 .container {
   min-height: 80vh;
   max-width: 650px;
   margin: 20px auto;
-  background-color: rgba(255, 255, 255, 0.12); /* Легший, майже невидимий */
-  backdrop-filter: blur(2px); /* М’якше */
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(2px);
   border-radius: 14px;
   padding: 20px 25px;
   text-align: center;
@@ -39,11 +39,9 @@ body {
 /* Заголовки */
 h1 {
   margin-bottom: 14px;
-  font-size: 2.4rem; /* Більший */
+  font-size: 2.4rem;
   font-weight: 700;
   color: #fff;
-
-  /* Неоновий обідок */
   text-shadow:
     0 0 4px #00eaff,
     0 0 8px #00eaff,
@@ -64,10 +62,12 @@ p {
   color: #fff;
 }
 
-/* Кнопки — нижчі та компактніші */
+/* Кнопки */
 .btn, .social-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 6px;
   text-decoration: none;
   font-weight: 600;
   padding: 9px 16px;
@@ -87,8 +87,11 @@ p {
   transform: translateY(-2px);
 }
 
+/* Логотипи у кнопках */
 .social-icon {
-  margin-left: 6px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 /* Соцмережі */
@@ -101,22 +104,10 @@ p {
   justify-content: center;
 }
 
-/* GIF */
-.gif-bottom-right {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 130px;
-  z-index: 999;
-  border-radius: 8px;
-}
-
 /* ---------------- MOBILE ---------------- */
 
 @media (max-width: 768px) {
-  body {
-    background-size: cover;
-  }
+  body { background-size: cover; }
 
   .container {
     padding: 15px 18px;
@@ -132,21 +123,6 @@ p {
     padding: 8px 12px;
     font-size: 0.85rem;
   }
-
-  #toggle-music {
-    padding: 7px 10px;
-    font-size: 0.8rem;
-  }
-
-  .volume-control {
-    top: 55px;
-    right: 12px;
-    padding: 4px 6px;
-  }
-
-  #volume-slider {
-    width: 70px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -156,26 +132,11 @@ p {
   }
 
   h1 { font-size: 1.7rem; }
-  h3 { font-size: 0.9rem; }
+  h3 { font-size:0.9rem; }
   p  { font-size: 0.8rem; }
 
   .btn, .social-btn {
     padding: 7px 10px;
     font-size: 0.8rem;
-  }
-
-  .volume-control {
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 4px 5px;
-  }
-
-  .volume-control label {
-    margin-bottom: 4px;
-    font-size: 0.75rem;
-  }
-
-  #volume-slider {
-    width: 60px;
   }
 }

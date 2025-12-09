@@ -34,6 +34,7 @@ body {
   padding: 20px 25px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+  position: relative;
 }
 
 /* Заголовки */
@@ -104,8 +105,15 @@ p {
   justify-content: center;
 }
 
-/* ---------------- MOBILE ---------------- */
+/* GIF внизу по центру */
+.homer-gif {
+  display: block;
+  margin: 20px auto 0; /* зверху 20px відступ від тексту, центр по горизонталі */
+  width: 120px;
+  height: auto;
+}
 
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   body { background-size: cover; }
 
@@ -123,6 +131,8 @@ p {
     padding: 8px 12px;
     font-size: 0.85rem;
   }
+
+  .homer-gif { width: 90px; }
 }
 
 @media (max-width: 480px) {
@@ -139,4 +149,6 @@ p {
     padding: 7px 10px;
     font-size: 0.8rem;
   }
+
+  .homer-gif { width: 70px; }
 }

@@ -25,16 +25,16 @@ body {
 
 /* Основний контейнер */
 .container {
+  position: relative; /* для абсолютного позиціонування GIF */
   min-height: 80vh;
   max-width: 650px;
   margin: 20px auto;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.12); /* прозорий сірий фон */
   backdrop-filter: blur(2px);
   border-radius: 14px;
   padding: 20px 25px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-  position: relative;
 }
 
 /* Заголовки */
@@ -105,22 +105,24 @@ p {
   justify-content: center;
 }
 
-/* GIF внизу по центру */
+/* GIF всередині контейнера знизу зліва */
 .homer-gif {
-  display: block;
-  margin: 20px auto 0; /* зверху 20px відступ від тексту, центр по горизонталі */
-  width: 180px;        /* збільшено для великих екранів */
-  height: auto;        /* зберігаємо пропорції */
+  position: absolute;  /* відносно контейнера */
+  bottom: 15px;        /* відступ від низу контейнера */
+  left: 15px;          /* відступ від лівого краю контейнера */
+  width: 150px;        /* розмір для десктопу */
+  height: auto;
+  
+  border-radius: 10px;
+  padding: 5px;
+  z-index: 10;
 }
 
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
-  body { background-size: cover; }
-
   .container {
-    padding: 15px 18px;
     max-width: 90%;
-    margin-top: 40px;
+    padding: 15px 18px;
   }
 
   h1 { font-size: 2rem; }
@@ -132,13 +134,12 @@ p {
     font-size: 0.85rem;
   }
 
-  .homer-gif { width: 150px; } /* збільшено для середніх екранів */
+  .homer-gif { width: 120px; }
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 12px;
-    margin-top: 50px;
   }
 
   h1 { font-size: 1.7rem; }
@@ -150,5 +151,5 @@ p {
     font-size: 0.8rem;
   }
 
-  .homer-gif { width: 120px; } /* збільшено для маленьких екранів */
+  .homer-gif { width: 90px; }
 }

@@ -112,7 +112,6 @@ p {
   left: 15px;          /* відступ від лівого краю контейнера */
   width: 150px;        /* розмір для десктопу */
   height: auto;
-  
   border-radius: 10px;
   padding: 5px;
   z-index: 10;
@@ -134,7 +133,7 @@ p {
     font-size: 0.85rem;
   }
 
-  .homer-gif { width: 120px; }
+  .homer-gif { width: 120px; left: 10px; } /* зліва для планшетів */
 }
 
 @media (max-width: 480px) {
@@ -151,5 +150,5 @@ p {
     font-size: 0.8rem;
   }
 
-  .homer-gif { width: 90px; }
+  .homer-gif { width: 90px; left: 10px; } /* зліва для телефонів */
 }
